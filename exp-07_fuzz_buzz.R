@@ -1,6 +1,12 @@
-for (n in 1:100) {
-  if (n %% 3 == 0 & n %% 5 == 0) {print("FizzBuzz")}
-  else if (n %% 3 == 0) {print("Fizz")}
-  else if (n %% 5 == 0) {print("Buzz")}
-  else print(n)
+for (i in 1:100) {
+  if(i%%3==0){
+    print("fizz")
+  }else if(i%%5==0){
+    print("buzz")
+  }else if(i%%3==0 & i%%5==0){
+    print("fizz buzz")
+  }else {
+    print(i)
+  }
+  
 }
