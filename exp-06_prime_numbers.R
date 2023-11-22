@@ -1,18 +1,14 @@
-prime_numbers <- function(n) {
-  if (n >= 2) {
-    x = seq(2, n)
-    prime_nums = c()
-    for (i in seq(2, n)) {
-      if (any(x == i)) {
-        prime_nums = c(prime_nums, i)
-        x = c(x[(x %% i) != 0], i)
-      }
+n <- 20
+
+for (i in 1:n) {
+  f <- 0
+  for (j in 2:(i-1)) {
+    if ((i %% j) == 0) {
+      f <- 1
+      break
     }
-    return(prime_nums)
   }
-  else 
-  {
-    stop("Input number should be at least 2.")
+  if (f == 0) {
+    print(i)
   }
-} 
-prime_numbers(12)
+}
